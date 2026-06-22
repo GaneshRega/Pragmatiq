@@ -79,7 +79,7 @@ export default function Page() {
                   data-aos="fade-up-sm"
                   className="has-gradient mb-4 text-h2 lg:text-h1"
                 >
-                  Agile Adaptive Accountability
+                  Agile. Adaptive. Accountability.
                 </h1>{" "}
                 <p
                   data-aos="fade-up-sm"

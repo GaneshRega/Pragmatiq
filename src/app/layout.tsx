@@ -9,8 +9,22 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Pragmatiq - SaaS & Startup Template",
-  description: "Recreated using Next.js and Tailwind CSS",
+  title: "Pragmatiq — Agile. Adaptive. Accountability.",
+  description:
+    "Pragmatiq builds scalable digital solutions powered by pragmatic innovation — spanning EdTech, AgriTech, and enterprise technology with agility, adaptability, and accountability at their core.",
+  openGraph: {
+    title: "Pragmatiq — Agile. Adaptive. Accountability.",
+    description:
+      "Pragmatiq builds scalable digital solutions powered by pragmatic innovation — spanning EdTech, AgriTech, and enterprise technology with agility, adaptability, and accountability at their core.",
+    siteName: "Pragmatiq",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pragmatiq — Agile. Adaptive. Accountability.",
+    description:
+      "Pragmatiq builds scalable digital solutions powered by pragmatic innovation — spanning EdTech, AgriTech, and enterprise technology with agility, adaptability, and accountability at their core.",
+  },
 };
 
 export default function RootLayout({

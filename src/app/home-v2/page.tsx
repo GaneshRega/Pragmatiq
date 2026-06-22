@@ -43,7 +43,7 @@ export default function HomeV2Page() {
                 </div>
 
                 <h1 className="mb-6 font-bold leading-[1.07] tracking-[-0.025em] text-white text-[2.5rem] sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]">
-                  Agile Adaptive
+                  Agile. Adaptive.
                   <br />
                   <span style={{
                     background: 'linear-gradient(100deg, #818cf8 0%, #a78bfa 25%, #c084fc 50%, #e879f9 75%, #f472b6 100%)',
@@ -51,7 +51,7 @@ export default function HomeV2Page() {
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                   }}>
-                    Accountability
+                    Accountability.
                   </span>
                 </h1>
 

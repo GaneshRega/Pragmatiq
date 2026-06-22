@@ -45,7 +45,7 @@ export default function HomeV1Page() {
                   </div>
                 </div>
                 <h1 data-aos="fade-up-sm" className="has-gradient mb-4 text-h2 lg:text-h1">
-                  Agile Adaptive Accountability
+                  Agile. Adaptive. Accountability.
                 </h1>
                 <p data-aos="fade-up-sm" className="mb-8 text-xl/[inherit] text-light">
                   Harnessing pragmatic innovation and leading technologies to build scalable digital solutions with agility, adaptability, and accountability at their core.
