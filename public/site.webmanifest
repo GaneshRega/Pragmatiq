@@ -1,0 +1,17 @@
+{
+  "name": "Pragmatiq",
+  "short_name": "Pragmatiq",
+  "description": "Pragmatiq builds scalable digital solutions powered by pragmatic innovation — spanning EdTech, AgriTech, and enterprise technology with agility, adaptability, and accountability at their core.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "/pragicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
