@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #070707;
+  --color-secondary: #2d57ee;
+  --color-body: #000000;
+  --color-border: #2c2c2c;
+  --color-dark: #0b0b0c;
+  --color-text: #e9e9e9;
+  --color-text-dark: #4e4e59;
+  --color-text-light: #cdcdcd;
+
+  /* Font */
+  --font-primary: var(--font-figtree);
+  --font-sans: var(--font-figtree);
+
+  /* Headers Sizes */
+  --text-h1: 4.05901rem;
+  --text-h1-sm: 3.65311rem;
+  --text-h2: 3.21378rem;
+  --text-h2-sm: 2.89241rem;
+  --text-h3: 2.54456rem;
+  --text-h3-sm: 2.29011rem;
+  --text-h4: 2.0147rem;
+  --text-h4-sm: 1.81323rem;
+  --text-h5: 1.59517rem;
+  --text-h5-sm: 1.43565rem;
+  --text-h6: 1.263rem;
+  --text-h6-sm: 1.1367rem;
+
+  --text-base: 16px;
+  --text-base-sm: 12.8px;
+
+  /* Specific gradient defaults */
+  --color-red-500: oklch(63.7% 0.237 25.331);
+
+  /* shadcn-style aliases for ScrollReelTestimonials */
+  --color-foreground: #e9e9e9;
+  --color-muted-foreground: #9898a0;
+}
+
+:root {
+  --background: var(--color-body);
+  --foreground: var(--color-text);
+}
+
+body {
+  background-color: var(--color-body);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .border-white\/5 {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .border-white\/15 {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@keyframes client-logo-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+.animate-client-logo {
+  animation: client-logo-marquee 40s linear infinite;
+}
+
+@media (max-width: 768px) {
+  @keyframes client-logo-marquee-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 1.5rem));
+    }
+  }
+  .animate-client-logo {
+    animation: client-logo-marquee-mobile 30s linear infinite;
+  }
+}
+
+/* Marquee scroll animations */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1.25rem));
+  }
+}
+
+@keyframes marquee-vertical-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% - 1.25rem));
+  }
+}
+
+.marquee {
+  animation-name: marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 60s;
+}
+
+.marquee-duration-60 {
+  animation-duration: 60s;
+}
+
+.marquee-duration-120 {
+  animation-duration: 120s;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+.marquee-vertical {
+  animation-name: marquee-scroll;
+}
+
+@media (min-width: 1024px) {
+  .marquee-vertical {
+    animation-name: marquee-vertical-scroll;
+  }
+}
+
+.on-hover-pause-animation:hover .marquee {
+  animation-play-state: paused;
+}
+
+/* ── Scroll Reel Testimonials ── */
+@keyframes scroll-reel-char-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-reel-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+.scroll-reel-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: scroll-reel-char-rise 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.scroll-reel-exit {
+  animation: scroll-reel-exit 240ms ease forwards;
+}
+
+.scroll-reel-exit .scroll-reel-char {
+  animation: none;
+}
