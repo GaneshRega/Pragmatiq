@@ -24,12 +24,12 @@ export default function HomeV2Page() {
         <section className="relative min-h-[92vh] overflow-hidden flex items-center" style={{background: '#07080f'}}>
 
           {/* Wave particle animation — full-bleed background */}
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-55">
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-90">
             <WaveAnimation
-              waveSpeed={1.2}
-              waveIntensity={48}
-              pointSize={2}
-              gridDistance={5}
+              waveSpeed={2.2}
+              waveIntensity={65}
+              pointSize={2.8}
+              gridDistance={3}
               particleColor="#818cf8"
               particleColorEnd="#f472b6"
             />
@@ -37,7 +37,7 @@ export default function HomeV2Page() {
 
           {/* Subtle dark vignette overlay so text stays readable */}
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1]" style={{
-            background: 'radial-gradient(ellipse 80% 60% at 50% 110%, transparent 40%, #07080f 80%)',
+            background: 'radial-gradient(ellipse 80% 60% at 50% 110%, transparent 55%, #07080f 85%)',
           }} />
 
           {/* Single soft ambient glow — right side, behind logo */}
