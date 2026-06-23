@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HomeSharedSections from "@/components/HomeSharedSections";
+import { WaveAnimation } from "@/components/ui/wave-animation-1";
 
 export default function HomeV2Page() {
   useEffect(() => {
@@ -22,13 +23,30 @@ export default function HomeV2Page() {
         {/* ── Hero ── */}
         <section className="relative min-h-[92vh] overflow-hidden flex items-center" style={{background: '#07080f'}}>
 
+          {/* Wave particle animation — full-bleed background */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 opacity-55">
+            <WaveAnimation
+              waveSpeed={1.2}
+              waveIntensity={48}
+              pointSize={2}
+              gridDistance={5}
+              particleColor="#818cf8"
+              particleColorEnd="#f472b6"
+            />
+          </div>
+
+          {/* Subtle dark vignette overlay so text stays readable */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1]" style={{
+            background: 'radial-gradient(ellipse 80% 60% at 50% 110%, transparent 40%, #07080f 80%)',
+          }} />
+
           {/* Single soft ambient glow — right side, behind logo */}
-          <div aria-hidden="true" className="pointer-events-none absolute right-[-8%] top-1/2 z-0 h-[860px] w-[860px] -translate-y-1/2 rounded-full" style={{
+          <div aria-hidden="true" className="pointer-events-none absolute right-[-8%] top-1/2 z-[1] h-[860px] w-[860px] -translate-y-1/2 rounded-full" style={{
             background: 'radial-gradient(ellipse at center, rgba(88,28,220,0.11) 0%, rgba(139,92,246,0.06) 45%, transparent 72%)',
             filter: 'blur(80px)',
           }} />
 
-          <div className="container relative z-10">
+          <div className="container relative z-10" style={{zIndex: 10}}>
             <div className="flex flex-col lg:flex-row items-center py-24 lg:min-h-[88vh] lg:py-0 lg:gap-0">
 
               {/* ══════════ LEFT: Content ══════════ */}
