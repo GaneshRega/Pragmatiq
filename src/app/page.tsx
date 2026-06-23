@@ -195,7 +195,7 @@ export default function Page() {
                       preload="auto"
                       poster="/_astro/banner.DSZMVOBl_ZAdTgc.webp"
                     >
-                      <source src="/landing_video.mp4" type="video/mp4" />
+                      <source src="/agile.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>

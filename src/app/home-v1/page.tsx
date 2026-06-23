@@ -29,7 +29,7 @@ export default function HomeV1Page() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-40"
           >
-            <source src="/landing_video.mp4" type="video/mp4" />
+            <source src="/agile.mp4" type="video/mp4" />
           </video>
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-black/85" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-blue-900/20 via-black/5 to-pink-900/20" />
