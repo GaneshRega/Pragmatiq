@@ -27,7 +27,6 @@ const WovenCanvas = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     mount.appendChild(renderer.domElement);
 
-    const clock = new THREE.Clock();
     const mouse = new THREE.Vector2(0, 0);
 
     // --- Build infinity (lemniscate of Bernoulli) particle field ---
@@ -83,7 +82,7 @@ const WovenCanvas = () => {
       vertexColors: true,
       blending: THREE.AdditiveBlending,
       transparent: true,
-      opacity: 1,
+      opacity: 0.68,
       depthWrite: false,
     });
 
@@ -104,7 +103,6 @@ const WovenCanvas = () => {
     let animId: number;
     const animate = () => {
       animId = requestAnimationFrame(animate);
-      const elapsed = clock.getElapsedTime();
       const mwx = mouse.x * 3;
       const mwy = mouse.y * 3;
 
@@ -117,12 +115,12 @@ const WovenCanvas = () => {
         orig.set(originalPositions[ix], originalPositions[iy], originalPositions[iz]);
         vTemp.set(velocities[ix], velocities[iy], velocities[iz]);
 
-        // Mouse repulsion
+        // Mouse repulsion — tight radius so effect is precise
         const dx = cur.x - mwx;
         const dy = cur.y - mwy;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 1.4) {
-          const force = ((1.4 - dist) * 0.014) / dist;
+        if (dist < 0.55) {
+          const force = ((0.55 - dist) * 0.018) / dist;
           vTemp.x += dx * force;
           vTemp.y += dy * force;
         }
@@ -144,9 +142,6 @@ const WovenCanvas = () => {
       }
 
       geometry.attributes.position.needsUpdate = true;
-      // Slow rotation to show 3-D depth
-      points.rotation.y = elapsed * 0.07;
-      points.rotation.x = Math.sin(elapsed * 0.04) * 0.12;
       renderer.render(scene, camera);
     };
     animate();
