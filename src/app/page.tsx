@@ -4,13 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  ContainerScroll,
-  ContainerSticky,
-  ContainerAnimated,
-  ContainerInset,
-  HeroVideo,
-} from "@/components/ui/animated-video-on-scroll";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 const clientLogos = [
   { name: "Clinally Logo", src: "/logos/Clinally Logo.png" },
   { name: "dr reddys", src: "/logos/dr reddys.png" },
@@ -54,18 +48,18 @@ export default function Page() {
       </div>{" "}
       <main id="main-content">
         {" "}
-        <section className="overflow-hidden relative">
-          <ContainerScroll className="h-[350vh]">
-            <ContainerSticky
-              style={{
-                background:
-                  "radial-gradient(60% 50% at 50% 0%, rgba(168,85,247,0.14) 0%, rgba(109,40,217,0.06) 50%, transparent 100%), #030208",
-              }}
-              className="flex flex-col items-center justify-center gap-10 px-6 py-24 text-slate-50"
-            >
-              {/* Hero text — fades + slides in on scroll */}
-              <ContainerAnimated className="space-y-6 text-center max-w-4xl w-full">
-                <div className="border-animation mx-auto w-fit rounded-full p-px">
+        <section className="overflow-hidden pb-0 relative">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[15%] top-1/3 z-10 h-[358px] w-[516px] rotate-[-19deg] rounded-full from-secondary/40 from-40% via-secondary via-60% to-primary opacity-30 blur-[100px] bg-linear-to-tr"
+          />
+          <ContainerScroll
+            titleComponent={
+              <div className="pt-6">
+                <div
+                  data-aos="fade-up-sm"
+                  className="border-animation mx-auto mb-4 w-fit rounded-full p-px"
+                >
                   <div className="border-animation-inner flex gap-2 rounded-full border border-white/15 px-3 py-1.5">
                     <img
                       src="/_astro/award.DBICt9v7_1KM3nu.svg"
@@ -80,88 +74,114 @@ export default function Page() {
                     </span>
                   </div>
                 </div>
-                <h1 className="has-gradient text-h2 lg:text-h1">
+                <h1
+                  data-aos="fade-up-sm"
+                  className="has-gradient mb-4 text-h2 lg:text-h1"
+                >
                   Agile. Adaptive. Accountability.
                 </h1>
-                <p className="mx-auto max-w-2xl text-xl/[inherit] text-light">
+                <p
+                  data-aos="fade-up-sm"
+                  className="mb-8 text-xl/[inherit] text-light max-w-2xl mx-auto"
+                >
                   Harnessing pragmatic innovation and leading technologies to
                   build scalable digital solutions with agility, adaptability,
                   and accountability at their core.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 pt-2">
-                  <Link
-                    className="btn btn-primary has-icon"
-                    href="/contact/"
-                    target="_self"
-                    rel="noopener"
-                  >
-                    <span className="value">
-                      <span data-content="Explore Solutions">
-                        Explore Solutions
-                      </span>
-                    </span>
-                    <span className="icon">
-                      <span>
-                        <span>
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 320 512"
-                            className="text-xs"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 320 512"
-                            aria-hidden="true"
-                            className="text-xs"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                          </svg>
+                <ul className="flex flex-wrap justify-center gap-4">
+                  <li data-aos="fade-up-sm" data-aos-delay="100">
+                    <Link
+                      className="btn btn-primary has-icon"
+                      href="/contact/"
+                      target="_self"
+                      rel="noopener"
+                    >
+                      <span className="value">
+                        <span data-content="Explore Solutions">
+                          Explore Solutions
                         </span>
                       </span>
-                    </span>
-                  </Link>
-                  <Link
-                    className="btn btn-outline-transparent"
-                    href="/contact/"
-                    target="_self"
-                    rel="noopener"
-                  >
-                    <span className="value">
-                      <span data-content="Partner with Us">Partner with Us</span>
-                    </span>
-                  </Link>
+                      <span className="icon">
+                        <span>
+                          <span>
+                            <svg
+                              stroke="currentColor"
+                              fill="currentColor"
+                              strokeWidth="0"
+                              viewBox="0 0 320 512"
+                              className="text-xs"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                          </span>
+                          <span>
+                            <svg
+                              stroke="currentColor"
+                              fill="currentColor"
+                              strokeWidth="0"
+                              viewBox="0 0 320 512"
+                              aria-hidden="true"
+                              className="text-xs"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                    </Link>
+                  </li>
+                  <li data-aos="fade-up-sm" data-aos-delay="150">
+                    <Link
+                      className="btn btn-outline-transparent"
+                      href="/contact/"
+                      target="_self"
+                      rel="noopener"
+                    >
+                      <span className="value">
+                        <span data-content="Partner with Us">
+                          Partner with Us
+                        </span>
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            }
+          >
+            {/* Browser mockup with video fills the 3D card */}
+            <div className="relative flex flex-col h-full w-full rounded-2xl overflow-hidden bg-[#070707]">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02] shrink-0">
+                <div className="flex gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/90 shadow-[0_0_8px_rgba(255,95,86,0.4)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/90 shadow-[0_0_8px_rgba(255,189,46,0.4)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]/90 shadow-[0_0_8px_rgba(39,201,63,0.4)]" />
                 </div>
-              </ContainerAnimated>
-
-              {/* Video — clip-path reveals from center + scales up on scroll */}
-              <ContainerInset
-                className="w-full max-w-5xl"
-                insetYRange={[10, 0]}
-                insetXRange={[10, 0]}
-                roundednessRange={[32, 16]}
-              >
-                <HeroVideo
-                  src="/agile.mp4"
-                  poster="/_astro/banner.DSZMVOBl_ZAdTgc.webp"
-                  className="w-full rounded-2xl shadow-[0_0_80px_rgba(168,85,247,0.25)]"
+                <div className="mx-auto bg-white/5 border border-white/10 text-[10px] text-white/50 px-8 py-0.5 rounded-full w-1/3 text-center truncate font-mono select-none">
+                  pragmatiq.systems
+                </div>
+                <div className="w-14" />
+              </div>
+              <div className="flex-1 overflow-hidden">
+                <video
+                  className="w-full h-full object-cover block"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   preload="auto"
-                />
-              </ContainerInset>
-            </ContainerSticky>
+                  poster="/_astro/banner.DSZMVOBl_ZAdTgc.webp"
+                >
+                  <source src="/agile.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </ContainerScroll>
         </section>{" "}
         <section className="section">
