@@ -1243,9 +1243,9 @@ export default function Page() {
         {/* ── Technology Venture Studio ── */}
         <section className="section">
           <div className="container">
-            <div className="row g-5 items-center">
-              {/* Left column – numbered steps */}
-              <div className="lg:col-5" data-aos="fade-up-sm">
+            <div className="row g-5 items-center flex flex-col lg:flex-row">
+              {/* Left column – numbered steps (sits below heading on mobile) */}
+              <div className="order-2 lg:order-1 lg:col-5" data-aos="fade-up-sm">
                 <div className="space-y-10">
                   {/* Step 01 */}
                   <div className="flex gap-6" data-aos="fade-up-sm" data-aos-delay="0">
@@ -1280,8 +1280,8 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Right column – heading, stats, tags, CTA */}
-              <div className="lg:col-6 lg:col-start-7" data-aos="fade-up-sm" data-aos-delay="100">
+              {/* Right column – heading, stats, tags, CTA (shows first on mobile) */}
+              <div className="order-1 lg:order-2 lg:col-6 lg:col-start-7" data-aos="fade-up-sm" data-aos-delay="100">
                 <h2 className="has-gradient mb-6">Technology Venture Studio</h2>
                 <p className="text-lg/[inherit] opacity-80">
                   We don&apos;t just build products — we co-found and accelerate startups from ideation to IPO-ready exits.
