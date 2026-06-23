@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 const clientLogos = [
   { name: "Clinally Logo", src: "/logos/Clinally Logo.png" },
   { name: "dr reddys", src: "/logos/dr reddys.png" },
@@ -47,21 +48,19 @@ export default function Page() {
       </div>{" "}
       <main id="main-content">
         {" "}
-        <section className="overflow-hidden pb-0 pt-16 relative">
-          {" "}
-          <div className="container">
-            {" "}
-            <div className="row justify-center">
-              {" "}
-              <div className="pt-6 text-center md:col-9 lg:col-9">
-                {" "}
+        <section className="overflow-hidden pb-0 relative">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[15%] top-1/3 z-10 h-[358px] w-[516px] rotate-[-19deg] rounded-full from-secondary/40 from-40% via-secondary via-60% to-primary opacity-30 blur-[100px] bg-linear-to-tr"
+          />
+          <ContainerScroll
+            titleComponent={
+              <div className="pt-6">
                 <div
                   data-aos="fade-up-sm"
                   className="border-animation mx-auto mb-4 w-fit rounded-full p-px"
                 >
-                  {" "}
                   <div className="border-animation-inner flex gap-2 rounded-full border border-white/15 px-3 py-1.5">
-                    {" "}
                     <img
                       src="/_astro/award.DBICt9v7_1KM3nu.svg"
                       alt="note"
@@ -69,49 +68,42 @@ export default function Page() {
                       decoding="async"
                       width="17"
                       height="17"
-                    />{" "}
+                    />
                     <span className="text-sm opacity-70 md:text-base">
                       PRAGMATIQ IN ACTION
-                    </span>{" "}
-                  </div>{" "}
-                </div>{" "}
+                    </span>
+                  </div>
+                </div>
                 <h1
                   data-aos="fade-up-sm"
                   className="has-gradient mb-4 text-h2 lg:text-h1"
                 >
                   Agile. Adaptive. Accountability.
-                </h1>{" "}
+                </h1>
                 <p
                   data-aos="fade-up-sm"
-                  className="mb-8 text-xl/[inherit] text-light"
+                  className="mb-8 text-xl/[inherit] text-light max-w-2xl mx-auto"
                 >
                   Harnessing pragmatic innovation and leading technologies to
                   build scalable digital solutions with agility, adaptability,
                   and accountability at their core.
-                </p>{" "}
+                </p>
                 <ul className="flex flex-wrap justify-center gap-4">
-                  {" "}
                   <li data-aos="fade-up-sm" data-aos-delay="100">
-                    {" "}
                     <Link
                       className="btn btn-primary has-icon"
                       href="/contact/"
                       target="_self"
                       rel="noopener"
                     >
-                      {" "}
                       <span className="value">
-                        {" "}
                         <span data-content="Explore Solutions">
                           Explore Solutions
-                        </span>{" "}
-                      </span>{" "}
+                        </span>
+                      </span>
                       <span className="icon">
-                        {" "}
                         <span>
-                          {" "}
                           <span>
-                            {" "}
                             <svg
                               stroke="currentColor"
                               fill="currentColor"
@@ -122,11 +114,10 @@ export default function Page() {
                               width="1em"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-                            </svg>{" "}
-                          </span>{" "}
+                              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                          </span>
                           <span>
-                            {" "}
                             <svg
                               stroke="currentColor"
                               fill="currentColor"
@@ -138,75 +129,60 @@ export default function Page() {
                               width="1em"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-                            </svg>{" "}
-                          </span>{" "}
-                        </span>{" "}
-                      </span>{" "}
-                    </Link>{" "}
+                              <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                    </Link>
                   </li>
                   <li data-aos="fade-up-sm" data-aos-delay="150">
-                    {" "}
                     <Link
                       className="btn btn-outline-transparent"
                       href="/contact/"
                       target="_self"
                       rel="noopener"
                     >
-                      {" "}
                       <span className="value">
-                        {" "}
                         <span data-content="Partner with Us">
                           Partner with Us
-                        </span>{" "}
-                      </span>{" "}
-                    </Link>{" "}
-                  </li>{" "}
-                </ul>{" "}
-              </div>{" "}
-              <div
-                className="col-12 pt-8 lg:pt-16"
-                data-aos="fade-up-sm"
-                data-aos-delay="400"
-              >
-                {" "}
-                <div className="relative mx-auto max-w-5xl rounded-2xl border border-white/10 bg-[#070707]/60 p-1 backdrop-blur-md shadow-[0_20px_50px_rgba(168,85,247,0.15)] overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(168,85,247,0.25)] hover:border-white/20">
-                  {" "}
-                  {/* Modern Browser Header */}
-                  <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02]">
-                    <div className="flex gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/90 shadow-[0_0_8px_rgba(255,95,86,0.4)]"></span>
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/90 shadow-[0_0_8px_rgba(255,189,46,0.4)]"></span>
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]/90 shadow-[0_0_8px_rgba(39,201,63,0.4)]"></span>
-                    </div>
-                    <div className="mx-auto bg-white/5 border border-white/10 text-[10px] text-white/50 px-8 py-0.5 rounded-full w-1/3 text-center truncate font-mono select-none">
-                      pragmatiq.systems
-                    </div>
-                    <div className="w-14"></div>
-                  </div>
-                  {/* Video Container */}
-                  <div className="relative w-full aspect-video overflow-hidden bg-black/40 rounded-b-xl">
-                    <video
-                      className="w-full h-full object-cover block relative z-10"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="auto"
-                      poster="/_astro/banner.DSZMVOBl_ZAdTgc.webp"
-                    >
-                      <source src="/agile.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-[15%] top-1/2 z-10 h-[358px] w-[516px] rotate-[-19deg] rounded-full from-secondary/40 from-40% via-secondary via-60% to-primary opacity-30 blur-[100px] bg-linear-to-tr md:top-1/3"
-          ></div>{" "}
+                        </span>
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            }
+          >
+            {/* Browser mockup with video fills the 3D card */}
+            <div className="relative flex flex-col h-full w-full rounded-2xl overflow-hidden bg-[#070707]">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02] shrink-0">
+                <div className="flex gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/90 shadow-[0_0_8px_rgba(255,95,86,0.4)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/90 shadow-[0_0_8px_rgba(255,189,46,0.4)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]/90 shadow-[0_0_8px_rgba(39,201,63,0.4)]" />
+                </div>
+                <div className="mx-auto bg-white/5 border border-white/10 text-[10px] text-white/50 px-8 py-0.5 rounded-full w-1/3 text-center truncate font-mono select-none">
+                  pragmatiq.systems
+                </div>
+                <div className="w-14" />
+              </div>
+              <div className="flex-1 overflow-hidden">
+                <video
+                  className="w-full h-full object-cover block"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="/_astro/banner.DSZMVOBl_ZAdTgc.webp"
+                >
+                  <source src="/agile.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </ContainerScroll>
         </section>{" "}
         <section className="section">
           {" "}
