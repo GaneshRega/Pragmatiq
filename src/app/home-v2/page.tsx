@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HomeSharedSections from "@/components/HomeSharedSections";
-import { WovenLightHero } from "@/components/ui/woven-light-hero";
+import { InfinityHero } from "@/components/ui/infinity-hero";
 
 export default function HomeV2Page() {
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function HomeV2Page() {
     <>
       <Header />
       <main id="main-content">
-        <WovenLightHero />
+        <InfinityHero />
         <HomeSharedSections />
       </main>
       <Footer />
